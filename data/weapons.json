@@ -1,0 +1,22 @@
+{
+  "item_longsword": {
+	"name": "Longsword",
+	"die": "1d8",
+	"type": "melee"
+  },
+  "item_shortsword": {
+	"name": "Shortsword",
+	"die": "1d6",
+	"type": "melee"
+  },
+  "item_mace": {
+	"name": "Mace",
+	"die": "1d6",
+	"type": "melee"
+  },
+  "item_staff": {
+	"name": "Staff",
+	"die": "1d6",
+	"type": "melee"
+  }
+}

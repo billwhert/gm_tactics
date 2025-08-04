@@ -1,0 +1,24 @@
+{
+  "fighter": {
+	"name": "Fighter",
+	"hit_die": "d10",
+	"save_proficiencies": ["STR", "CON"]
+  },
+  "cleric": {
+	"name": "Cleric",
+	"hit_die": "d8",
+	"save_proficiencies": ["WIS", "CHA"],
+	"spellcasting_ability": "WIS"
+  },
+  "rogue": {
+	"name": "Rogue",
+	"hit_die": "d8",
+	"save_proficiencies": ["DEX", "INT"]
+  },
+  "wizard": {
+	"name": "Wizard",
+	"hit_die": "d6",
+	"save_proficiencies": ["INT", "WIS"],
+	"spellcasting_ability": "INT"
+  }
+}

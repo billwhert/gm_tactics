@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjg34yy75tu04"]
+
+[ext_resource type="Script" uid="uid://ddjv3qhc57cuu" path="res://scripts/core/GameManager.gd" id="1_nrstr"]
+[ext_resource type="Script" uid="uid://cc30dr5xwjhmm" path="res://scripts/display/VisualRoomDisplay.gd" id="2_visual"]
+[ext_resource type="Script" uid="uid://c8elfwyr6rhq0" path="res://scripts/systems/HybridWordSystem.gd" id="3_word"]
+[ext_resource type="Script" uid="uid://d0rhh64p174xm" path="res://scripts/systems/MomentumSystem.gd" id="4_momentum"]
+[ext_resource type="Script" uid="uid://bv8odd737pvo2" path="res://scripts/systems/AchievementTracker.gd" id="5_achieve"]
+[ext_resource type="Script" uid="uid://b5ax83msbchqg" path="res://scripts/systems/CampWordSystem.gd" id="6_camp"]
+[ext_resource type="Script" uid="uid://cgy3armmttx62" path="res://scripts/systems/SaveSystem.gd" id="7_save"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_nrstr")
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="HybridWordSystem" type="Node" parent="Systems"]
+script = ExtResource("3_word")
+
+[node name="MomentumSystem" type="Node" parent="Systems"]
+script = ExtResource("4_momentum")
+
+[node name="AchievementTracker" type="Node" parent="Systems"]
+script = ExtResource("5_achieve")
+
+[node name="CampWordSystem" type="Node" parent="Systems"]
+script = ExtResource("6_camp")
+
+[node name="SaveSystem" type="Node" parent="Systems"]
+script = ExtResource("7_save")
+
+[node name="Display" type="Node2D" parent="."]
+
+[node name="VisualRoomDisplay" type="Node2D" parent="Display"]
+script = ExtResource("2_visual")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MainUI" type="Control" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TopBar" type="Panel" parent="UI/MainUI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="HBox" type="HBoxContainer" parent="UI/MainUI/TopBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="RoomLabel" type="Label" parent="UI/MainUI/TopBar/HBox"]
+layout_mode = 2
+text = "Room 1"
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="UI/MainUI/TopBar/HBox"]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="UI/MainUI/TopBar/HBox"]
+layout_mode = 2
+text = "Turn 1"
+vertical_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="UI/MainUI/TopBar/HBox"]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="UI/MainUI/TopBar/HBox"]
+layout_mode = 2
+text = "Gold: 100"
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="UI/MainUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Adventure"
+
+[node name="WordAssignmentUI" type="Control" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RestUI" type="Control" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CombatUI" type="Control" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0

@@ -1,0 +1,138 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkr40ddcchoam"]
+
+[ext_resource type="Script" path="res://scripts/ui/RestRoomUI.gd" id="1"]
+
+[node name="RestRoomUI" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(600, 400)
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="Title" type="Label" parent="CenterContainer/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Safe Haven - Rest Room"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/Panel/VBox"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="CenterContainer/Panel/VBox"]
+layout_mode = 2
+text = "You've found a safe place to rest. What would you like to do?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RestInfo" type="Label" parent="CenterContainer/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Short Rests Remaining: 2"
+horizontal_alignment = 1
+modulate = Color(0.8, 0.8, 1, 1)
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/Panel/VBox"]
+layout_mode = 2
+
+[node name="Options" type="VBoxContainer" parent="CenterContainer/Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="CampButton" type="Button" parent="CenterContainer/Panel/VBox/Options"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 60)
+text = "Make Camp"
+tooltip_text = "Use camp words to prepare for upcoming battles"
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/Options/CampButton"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -20.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Prepare buffs for next combat"
+horizontal_alignment = 2
+modulate = Color(0.7, 0.7, 0.7, 1)
+
+[node name="ShortRestButton" type="Button" parent="CenterContainer/Panel/VBox/Options"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 60)
+text = "Short Rest"
+tooltip_text = "Fully heal party and restore all class word uses"
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/Options/ShortRestButton"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -20.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Full heal and restore abilities"
+horizontal_alignment = 2
+modulate = Color(0.7, 0.7, 0.7, 1)
+
+[node name="SkipButton" type="Button" parent="CenterContainer/Panel/VBox/Options"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 60)
+text = "Skip Rest"
+tooltip_text = "Continue without resting"
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/Options/SkipButton"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -20.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "Save resources for later"
+horizontal_alignment = 2
+modulate = Color(0.7, 0.7, 0.7, 1)

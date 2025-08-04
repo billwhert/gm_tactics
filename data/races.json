@@ -1,0 +1,34 @@
+{
+  "human": {
+	"name": "Human",
+	"bonuses": {
+	  "STR": 1,
+	  "DEX": 1,
+	  "CON": 1,
+	  "INT": 1,
+	  "WIS": 1,
+	  "CHA": 1
+	}
+  },
+  "elf": {
+	"name": "Elf",
+	"bonuses": {
+	  "DEX": 2,
+	  "INT": 1
+	}
+  },
+  "dwarf": {
+	"name": "Dwarf",
+	"bonuses": {
+	  "CON": 2,
+	  "STR": 1
+	}
+  },
+  "halfling": {
+	"name": "Halfling",
+	"bonuses": {
+	  "DEX": 2,
+	  "CHA": 1
+	}
+  }
+}
